@@ -1,4 +1,5 @@
 import type { Course } from '../types'
+import GlareHover from './GlareHover'
 
 const courses: Course[] = [
   {
@@ -35,20 +36,36 @@ const Courses = () => {
         
         <div className="grid grid-cols-3">
           {courses.map((course, index) => (
-            <div key={index} className="course-card">
-              <div className="course-image">
-                <div className="course-placeholder">{course.icon}</div>
-              </div>
-              <div className="course-content">
-                <h3>{course.title}</h3>
-                <p>{course.description}</p>
-                <div className="course-meta">
-                  <span>{course.duration}</span>
-                  <span>{course.level}</span>
+            <GlareHover
+              key={index}
+              width="100%"
+              height="100%"
+              background="var(--card)"
+              borderRadius="var(--radius)"
+              borderColor="var(--border)"
+              glareColor="var(--accent-foreground)"
+              glareOpacity={0.15}
+              glareAngle={-25}
+              glareSize={180}
+              transitionDuration={700}
+              playOnce={false}
+              className="course-glare-wrapper"
+            >
+              <div className="course-card">
+                <div className="course-image">
+                  <div className="course-placeholder">{course.icon}</div>
                 </div>
-                <button className="btn btn-primary">Enroll Now</button>
+                <div className="course-content">
+                  <h3>{course.title}</h3>
+                  <p>{course.description}</p>
+                  <div className="course-meta">
+                    <span>{course.duration}</span>
+                    <span>{course.level}</span>
+                  </div>
+                  <button className="btn btn-primary">Enroll Now</button>
+                </div>
               </div>
-            </div>
+            </GlareHover>
           ))}
         </div>
       </div>
