@@ -11,8 +11,7 @@ const Hero = () => {
               Join thousands of students who have transformed their careers and lives through our comprehensive coaching programs. Expert instructors, personalized learning, and proven results.
             </p>
             <div className="hero-actions">
-              <button className="btn btn-primary">Get Started</button>
-              <button className="btn btn-secondary">Learn More</button>
+              <button className="btn btn-primary btn-large">Enroll Now</button>
             </div>
           </div>
           <div className="hero-image">
