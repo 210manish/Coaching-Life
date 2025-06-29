@@ -16,10 +16,22 @@ import AdvancedCourse from './pages/AdvancedCourse'
 import Enrollment from './pages/Enrollment'
 import './App.css'
 
-function HomePage() {
+// Layout component that includes Navigation and Footer
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="App">
       <Navigation />
+      <main>
+        {children}
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+function HomePage() {
+  return (
+    <>
       <Hero />
       <Teachers />
       <Courses />
@@ -28,8 +40,7 @@ function HomePage() {
       <CTA />
       <CallbackSection />
       <FAQ />
-      <Footer />
-    </div>
+    </>
   )
 }
 
@@ -37,10 +48,26 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/course/beginner" element={<BeginnerCourse />} />
-        <Route path="/course/advanced" element={<AdvancedCourse />} />
-        <Route path="/enrollment" element={<Enrollment />} />
+        <Route path="/" element={
+          <Layout>
+            <HomePage />
+          </Layout>
+        } />
+        <Route path="/course/beginner" element={
+          <Layout>
+            <BeginnerCourse />
+          </Layout>
+        } />
+        <Route path="/course/advanced" element={
+          <Layout>
+            <AdvancedCourse />
+          </Layout>
+        } />
+        <Route path="/enrollment" element={
+          <Layout>
+            <Enrollment />
+          </Layout>
+        } />
       </Routes>
     </Router>
   )
