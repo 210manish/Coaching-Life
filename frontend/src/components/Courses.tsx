@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import type { Course } from '../types'
 import GlareHover from './GlareHover'
 
@@ -7,18 +8,22 @@ const courses: Course[] = [
     title: "Beginner Course",
     description: "Perfect for newcomers! Learn the fundamentals and build a strong foundation for your journey.",
     duration: "12 weeks",
-    level: "Beginner"
+    level: "Beginner",
+    path: "/course/beginner"
   },
   {
     icon: "🚀",
     title: "Advanced Course",
     description: "Take your skills to the next level with advanced techniques and expert-level content.",
     duration: "12 weeks",
-    level: "Advanced"
+    level: "Advanced",
+    path: "/course/advanced"
   }
 ]
 
 const Courses = () => {
+  const navigate = useNavigate()
+
   return (
     <section id="courses" className="section courses">
       <div className="container">
@@ -55,7 +60,12 @@ const Courses = () => {
                     <span>{course.duration}</span>
                     <span>{course.level}</span>
                   </div>
-                  <button className="btn btn-primary">Explore</button>
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => navigate(course.path)}
+                  >
+                    Explore
+                  </button>
                 </div>
               </div>
             </GlareHover>

@@ -10,6 +10,7 @@ export interface Course {
   description: string
   duration: string
   level: string
+  path: string
 }
 
 export interface Stat {
