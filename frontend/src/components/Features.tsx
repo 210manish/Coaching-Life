@@ -20,7 +20,7 @@ const features: Feature[] = [
 
 const Features = () => {
   return (
-    <section className="section features">
+    <section id="features" className="section features">
       <div className="container">
         <h2 className="section-title">Why Choose EduCenter?</h2>
         <p className="section-subtitle">

@@ -3,9 +3,10 @@ import {
   Hero,
   Features,
   Courses,
-  Stats,
+  Teachers,
   Testimonials,
   CTA,
+  FAQ,
   Footer
 } from './components'
 import './App.css'
@@ -15,11 +16,12 @@ function App() {
     <div className="App">
       <Navigation />
       <Hero />
-      <Features />
       <Courses />
-      <Stats />
-      <Testimonials />
+      <Teachers />
+      <Features />
+      {/* <Testimonials /> */}
       <CTA />
+      <FAQ />
       <Footer />
     </div>
   )

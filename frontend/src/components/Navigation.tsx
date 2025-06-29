@@ -13,11 +13,9 @@ const Navigation = () => {
           </div>
           
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-            <a href="#home" className="nav-link">Home</a>
             <a href="#courses" className="nav-link">Courses</a>
-            <a href="#about" className="nav-link">About</a>
-            <a href="#testimonials" className="nav-link">Testimonials</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            <a href="#admissions" className="nav-link">Admissions</a>
+            <a href="#features" className="nav-link">Why Us?</a>
           </div>
           
           <div className="nav-actions">
