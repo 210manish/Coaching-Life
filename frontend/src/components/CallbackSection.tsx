@@ -24,7 +24,7 @@ const CallbackSection = () => {
   }
 
   return (
-    <section className="section callback-section">
+    <section id="callback" className="section callback-section">
       <div className="container">
         <div className="callback-content">
           <div className="callback-left">
