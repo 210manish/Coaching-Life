@@ -13,6 +13,7 @@ import {
 } from './components'
 import BeginnerCourse from './pages/BeginnerCourse'
 import AdvancedCourse from './pages/AdvancedCourse'
+import Enrollment from './pages/Enrollment'
 import './App.css'
 
 function HomePage() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/course/beginner" element={<BeginnerCourse />} />
         <Route path="/course/advanced" element={<AdvancedCourse />} />
+        <Route path="/enrollment" element={<Enrollment />} />
       </Routes>
     </Router>
   )

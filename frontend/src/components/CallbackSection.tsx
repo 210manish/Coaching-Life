@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const CallbackSection = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ const CallbackSection = () => {
   }
 
   return (
-    <section className="section callback-section">
+    <section id="callback" className="section callback-section">
       <div className="container">
         <div className="callback-content">
           <div className="callback-left">
@@ -104,9 +105,9 @@ const CallbackSection = () => {
         </div>
         
         <div className="enroll-now-section">
-          <button className="btn btn-primary btn-large">
+          <Link to="/enrollment" className="btn btn-primary btn-large">
             Enroll Now - Secure Your Spot!
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Hero = () => {
   return (
     <section id="home" className="hero">
@@ -11,7 +13,7 @@ const Hero = () => {
               Join thousands of students who have transformed their careers and lives through our comprehensive coaching programs. Expert instructors, personalized learning, and proven results.
             </p>
             <div className="hero-actions">
-              <button className="btn btn-primary btn-large">Enroll Now</button>
+              <Link to="/enrollment" className="btn btn-primary btn-large">Enroll Now</Link>
             </div>
           </div>
           <div className="hero-image">
